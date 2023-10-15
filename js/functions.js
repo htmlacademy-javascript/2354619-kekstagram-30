@@ -18,3 +18,27 @@ isPalindrome('топот'); // true
 isPalindrome('ДовОд'); // true
 isPalindrome('Кекс'); // false
 isPalindrome('Лёша на полке клопа нашёл '); // true
+
+const extractDigits = (input) => {
+  const inputString = input.toString();
+  let result = '';
+
+  for (let i = 0; i < inputString.length; i++) {
+    if (inputString[i] >= '0' && inputString[i] <= '9') {
+      result += inputString[i];
+    }
+  }
+
+  return result ? parseInt(result, 10) : NaN;
+};
+
+extractDigits('2023 год'); // 2023
+extractDigits('ECMAScript 2022'); // 2022
+extractDigits('1 кефир, 0.5 батона'); // 105
+extractDigits('агент 007'); // 7
+extractDigits('а я томат'); // NaN
+
+extractDigits(2023); // 2023
+extractDigits(-1); // 1
+extractDigits(1.5); // 15
+
