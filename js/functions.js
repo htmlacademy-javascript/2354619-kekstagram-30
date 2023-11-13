@@ -41,4 +41,3 @@ extractDigits('а я томат'); // NaN
 extractDigits(2023); // 2023
 extractDigits(-1); // 1
 extractDigits(1.5); // 15
-
